@@ -39,7 +39,7 @@ class ApplicationController < Sinatra::Base
 
   patch '/posts/:id' do
     @post = Post.find(params[:id])
-    @updated_post = Post.update(params)
+    @updated_post = Post.update(params[:id])
     redirect '/posts/${@post.id}'
   end
 
