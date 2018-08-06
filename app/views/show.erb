@@ -11,5 +11,11 @@
         <h2>Post Title: <%= @post.name %></h2><br>
         <p><%= @post.content %></p>
       </div><br>
+
+      <form action="/posts/<%= @post.id/delete %>" method="post">
+        <input id="hidden" type="hidden" name="_method" value="DELETE">
+        <input type="Submit" name="Delete">
+      </form>
+
   </body>
 </html>
