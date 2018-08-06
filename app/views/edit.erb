@@ -10,10 +10,10 @@
 
     <form action="/posts/<%= @post.id %>" method="post">
     <input id="hidden" type="hidden" name="_method" value="patch">
-      <label>Post Title: </label><input type="text" name="name"><br>
-      <label>Post Content: </label><input type="text" name="content"><br>
+      <label>Post Title: </label><input type="text" name="name" value="<%= @post.name %>"><br>
+      <label>Post Content: </label><input type="text" name="content" value="<%= @post.content %>"><br>
 
-      <button type="submit" value="submit">Submit</button>
-  
+      <button type="submit" value="submit">Submit Edits</button>
+
   </body>
 </html>
