@@ -34,12 +34,12 @@ class ApplicationController < Sinatra::Base
 
   get '/posts/:id/edit' do
     @post = Post.find(params[:id])
-    @updated_post = Post.update(params)
     erb :edit
   end
 
   patch '/posts/:id' do
     @post = Post.find(params[:id])
+    @updated_post = Post.update(params)
     redirect '/posts/${@post.id}'
   end
 
